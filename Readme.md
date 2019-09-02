@@ -1,5 +1,3 @@
-Welcome file
-Welcome file
 # Library Management System
 ## A Desktop application to Manage a library. 
 
@@ -32,33 +30,3 @@ Object Oriented Programming Concepts will be Used to make the System more Mainta
 
 > Under Development
 ###### A product by ManageIT
-Library Management System
-A Desktop application to Manage a library.
-Technical Approach
-1. OOP Concepts:
-Object Oriented Programming Concepts will be Used to make the System more Maintainable more Modular. So that it can be changed to any needs of the consumer if necessary and to be able to maintain the System. OOP principles that will be used are:
-
-Class
-Object
-Inheritance
-Polymorphism
-Abstraction
-Encapsulation
-2. Tools to Be used:
-Environment : Visual Studio v-2019
-Language : C# , SQL
-Framework: .NET v-4.7.2
-Data Base: Microsoft SQL Server
-3. Three Layer Architecture:
-Presentation Layer:
-Visual Studio IDE and .NET Framework will be used Create the forms for user Interaction.
-Bunifu Extensions for styling the UI v-1.11.5.1
-Application Layer :
-The Logical part of the system will be implemented in C# programming language Using .NET framework .
-Data Layer :
-Microsoft SQL Server will be used as the Data Base for the system.
-The data connection is done in c# no Framework used,
-Under Development
-
-A product by ManageIT
-Markdown 1172 bytes 197 words 32 lines Ln 19, Col 34 HTML 859 characters 168 words 27 paragraphs
