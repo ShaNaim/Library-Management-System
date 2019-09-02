@@ -1,5 +1,5 @@
 # Library Management System
-## A Desktop application to Mange a library.
+## A Desktop application to Manage a library.
 ## Technical Approach
 
 ## 1. OOP Concepts:
