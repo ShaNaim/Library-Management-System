@@ -30,19 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btnClose = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblHome = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtSearch = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnRegister = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.mnstHome = new System.Windows.Forms.MenuStrip();
+            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tblHome.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.mnstHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -52,10 +55,10 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1144, 0);
+            this.btnClose.Location = new System.Drawing.Point(1128, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(56, 56);
+            this.btnClose.Size = new System.Drawing.Size(56, 42);
             this.btnClose.TabIndex = 7;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
@@ -63,22 +66,22 @@
             this.btnClose.MouseLeave += new System.EventHandler(this.BtnClose_MouseLeave);
             this.btnClose.MouseHover += new System.EventHandler(this.BtnClose_MouseHover);
             // 
-            // tableLayoutPanel1
+            // tblHome
             // 
-            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1200, 700);
-            this.tableLayoutPanel1.TabIndex = 5;
+            this.tblHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tblHome.BackgroundImage")));
+            this.tblHome.ColumnCount = 1;
+            this.tblHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblHome.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tblHome.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tblHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblHome.Location = new System.Drawing.Point(0, 0);
+            this.tblHome.Margin = new System.Windows.Forms.Padding(0);
+            this.tblHome.Name = "tblHome";
+            this.tblHome.RowCount = 2;
+            this.tblHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tblHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblHome.Size = new System.Drawing.Size(1184, 761);
+            this.tblHome.TabIndex = 5;
             // 
             // tableLayoutPanel2
             // 
@@ -90,7 +93,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.bunifuCustomLabel1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(365, 241);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(357, 265);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54F));
@@ -186,12 +189,11 @@
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
-            this.tableLayoutPanel3.Controls.Add(this.btnRegister, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.bunifuFlatButton1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.mnstHome, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnClose, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.bunifuCustomLabel2, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -200,48 +202,8 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1200, 56);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1184, 42);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Active = false;
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.CadetBlue;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Login";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(95, 56);
-            this.bunifuFlatButton1.TabIndex = 8;
-            this.bunifuFlatButton1.Text = "Login";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.BunifuFlatButton1_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -249,54 +211,44 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Snow;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(409, 11);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(401, 4);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(368, 33);
             this.bunifuCustomLabel2.TabIndex = 9;
             this.bunifuCustomLabel2.Text = "Warehouse of Knowledge";
             // 
-            // btnRegister
+            // mnstHome
             // 
-            this.btnRegister.Active = false;
-            this.btnRegister.Activecolor = System.Drawing.Color.CadetBlue;
-            this.btnRegister.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRegister.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegister.BorderRadius = 0;
-            this.btnRegister.ButtonText = "Register";
-            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegister.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRegister.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRegister.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnRegister.Iconimage")));
-            this.btnRegister.Iconimage_right = null;
-            this.btnRegister.Iconimage_right_Selected = null;
-            this.btnRegister.Iconimage_Selected = null;
-            this.btnRegister.IconMarginLeft = 0;
-            this.btnRegister.IconMarginRight = 0;
-            this.btnRegister.IconRightVisible = true;
-            this.btnRegister.IconRightZoom = 0D;
-            this.btnRegister.IconVisible = true;
-            this.btnRegister.IconZoom = 90D;
-            this.btnRegister.IsTab = false;
-            this.btnRegister.Location = new System.Drawing.Point(114, 0);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnRegister.OnHovercolor = System.Drawing.Color.DarkSlateGray;
-            this.btnRegister.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRegister.selected = false;
-            this.btnRegister.Size = new System.Drawing.Size(110, 56);
-            this.btnRegister.TabIndex = 10;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegister.Textcolor = System.Drawing.Color.White;
-            this.btnRegister.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
-            this.btnRegister.MouseEnter += new System.EventHandler(this.BtnClose_MouseEnter);
-            this.btnRegister.MouseLeave += new System.EventHandler(this.BtnClose_MouseLeave);
-            this.btnRegister.MouseHover += new System.EventHandler(this.BtnClose_MouseHover);
+            this.mnstHome.BackColor = System.Drawing.Color.Coral;
+            this.mnstHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mnstHome.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnstHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeToolStripMenuItem,
+            this.loginToolStripMenuItem,
+            this.registerToolStripMenuItem});
+            this.mnstHome.Location = new System.Drawing.Point(0, 0);
+            this.mnstHome.Name = "mnstHome";
+            this.mnstHome.Size = new System.Drawing.Size(215, 42);
+            this.mnstHome.TabIndex = 10;
+            this.mnstHome.Text = "menuStrip1";
+            // 
+            // homeToolStripMenuItem
+            // 
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(57, 38);
+            this.homeToolStripMenuItem.Text = "Home";
+            // 
+            // loginToolStripMenuItem
+            // 
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(55, 38);
+            this.loginToolStripMenuItem.Text = "Login";
+            // 
+            // registerToolStripMenuItem
+            // 
+            this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
+            this.registerToolStripMenuItem.Size = new System.Drawing.Size(72, 38);
+            this.registerToolStripMenuItem.Text = "Register";
             // 
             // Home
             // 
@@ -304,17 +256,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.tblHome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tblHome.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.mnstHome.ResumeLayout(false);
+            this.mnstHome.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -322,15 +276,17 @@
         #endregion
 
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tblHome;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtSearch;
         private Bunifu.Framework.UI.BunifuFlatButton btnSearch;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuFlatButton btnRegister;
+        private System.Windows.Forms.MenuStrip mnstHome;
+        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem;
     }
 }

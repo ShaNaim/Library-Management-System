@@ -256,7 +256,8 @@
             this.btnResister.TabIndex = 5;
             this.btnResister.TabStop = true;
             this.btnResister.Text = "Don\'t Have an Account ? Resister Here";
-            this.btnResister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BtnResister_LinkClicked);
+            //this.btnResister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BtnResister_LinkClicked);
+            this.btnResister.Click += new System.EventHandler(this.BtnResister_Click);
             // 
             // label3
             // 

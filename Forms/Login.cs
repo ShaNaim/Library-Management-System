@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageIT.LMS.Default.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,6 @@ namespace ManageIT.LMS.Forms
 
         /////////////////////// Custome Methoods ////////////////////////////
 
-        private void HoverEffect(Button btn)
-        {
-            Color color = Color.DarkSlateGray;
-            btn.BackColor = color;
-        }
-
         /////////////////////// Custome Methoods Ends ////////////////////////////
 
         /////////////////////// Action Events ////////////////////////////
@@ -38,16 +33,17 @@ namespace ManageIT.LMS.Forms
 
         private void BtnLogin_MouseHover(object sender, EventArgs e)
         {
-            HoverEffect(btnLogin);
+            Color color = Color.DarkSlateGray;
+            FormsUtility.HoverEffect(btnLogin, color);
         }
 
         private void BtnLogin_MouseLeave(object sender, EventArgs e)
         {
             Color color = Color.Transparent;
-            btnLogin.BackColor = color;
+            FormsUtility.HoverEffect(btnLogin, color);
         }
 
-        private void BtnResister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void BtnResister_Click(object sender, EventArgs e)
         {
             Register registerPage = new Register();
             registerPage.Show();

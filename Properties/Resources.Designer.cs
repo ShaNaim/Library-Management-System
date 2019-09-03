@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageIT.LMS.Forms.Properties {
+namespace ManageIT.LMS.Default.Properties {
     using System;
     
     
@@ -86,6 +86,16 @@ namespace ManageIT.LMS.Forms.Properties {
         internal static System.Drawing.Bitmap LoginPage {
             get {
                 object obj = ResourceManager.GetObject("LoginPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PageTextute {
+            get {
+                object obj = ResourceManager.GetObject("PageTextute", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

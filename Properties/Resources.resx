@@ -121,13 +121,16 @@
   <data name="iconfinder_about_4092564" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UserResources\png\iconfinder_about_4092564.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LoginPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\UserResources\Icons\LoginPage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_00-ELASTOFONT-STORE-READY_close_2703079" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UserResources\Icons\iconfinder_00-ELASTOFONT-STORE-READY_close_2703079.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wallpaper-Kemra-Bookshelf-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UserResources\Icons\Wallpaper-Kemra-Bookshelf-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\UserResources\Icons\LoginPage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PageTextute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\UserResources\Icons\PageTextute.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

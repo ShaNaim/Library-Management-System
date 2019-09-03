@@ -27,4 +27,9 @@ D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\UserResourc
 D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\obj\Debug\ManageIT.LMS.Forms.Home.resources
 D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\obj\Debug\ManageIT.LMS.Forms.Login.resources
 D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\obj\Debug\ManageIT.LMS.Forms.Register.resources
+D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\obj\Debug\ManageIT.LMS.Forms.SearchResult.resources
+D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
 D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\obj\Debug\ManageIT.LMS.Default.csprojAssemblyReference.cache
+D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml

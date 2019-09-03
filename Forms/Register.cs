@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using ManageIT.LMS.Default.Forms;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManageIT.LMS.Forms
@@ -18,19 +13,9 @@ namespace ManageIT.LMS.Forms
         }
 
         /////////////////////// Custom Methods ///////////////////////
-        private void HoverEffect(Button btn,Color clr)
-        {
-            Color color = clr;
-            btn.BackColor = color;
-        }
+        
 
-        private void FocusOn(KeyPressEventArgs userInput , TextBox nextTxt)
-        {
-            if (userInput.KeyChar.Equals((char)Keys.Enter))
-            {
-                nextTxt.Focus();
-            }
-        }
+        
 
         private void ClearFields()
         {
@@ -53,7 +38,7 @@ namespace ManageIT.LMS.Forms
             {
                 return false;
             }
-            else if(diffResult.Days <= 800)
+            else if (diffResult.Days <= 800)
             {
                 return false;
             }
@@ -65,13 +50,13 @@ namespace ManageIT.LMS.Forms
 
         private bool InputCheck()
         {
-            if(txtName.Text == "")
+            if (txtName.Text == "")
             {
                 lblSyntexError.Text = "Name Must be Filled";
                 lblSyntexError.Visible = true;
                 return false;
             }
-            else if(txtContact.Text == "")
+            else if (txtContact.Text == "")
             {
                 lblSyntexError.Text = "Contact Must be Filled";
                 lblSyntexError.Visible = true;
@@ -89,7 +74,7 @@ namespace ManageIT.LMS.Forms
                 lblSyntexError.Visible = true;
                 return false;
             }
-            else if(!CheckDateTime(dtpDob))
+            else if (!CheckDateTime(dtpDob))
             {
                 lblSyntexError.Text = "Incorrect Date of Birth (DOB)";
                 lblSyntexError.Visible = true;
@@ -107,14 +92,14 @@ namespace ManageIT.LMS.Forms
 
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
-            if(txtPassword.Text != "")
+            if (txtPassword.Text != "")
             {
-                if(txtPassword.Text.Length >= 8)
+                if (txtPassword.Text.Length >= 8)
                 {
                     lblUserError.Visible = false;
                 }
             }
-            else if(txtPassword.Text == "")
+            else if (txtPassword.Text == "")
             {
                 lblUserError.Visible = true;
             }
@@ -123,35 +108,35 @@ namespace ManageIT.LMS.Forms
         private void BtnConfirm_MouseHover(object sender, EventArgs e)
         {
             Color clr = Color.ForestGreen;
-            HoverEffect(btnConfirm,clr);
+            FormsUtility.HoverEffect(btnConfirm, clr);
         }
 
         private void BtnConfirm_MouseLeave(object sender, EventArgs e)
         {
             Color color = Color.LightGreen;
-            btnConfirm.BackColor = color;
+            FormsUtility.HoverEffect(btnConfirm, color);
         }
 
         private void Button1_MouseHover(object sender, EventArgs e)
         {
             Color clr = Color.Red;
-            HoverEffect(btnCancel, clr);
+            FormsUtility.HoverEffect(btnCancel, clr);
         }
 
         private void BtnCancel_MouseLeave(object sender, EventArgs e)
         {
             _ = new Color();
             Color clr = Color.FromArgb(255, 128, 128);
-            btnCancel.BackColor = clr;
+            FormsUtility.HoverEffect(btnCancel, clr);
         }
 
         private void TxtContact_TextChanged(object sender, EventArgs e)
         {
-            if(txtContact.Text != "")
+            if (txtContact.Text != "")
             {
                 txtId.Text = txtContact.Text;
             }
-            else if(txtContact.Text == "")
+            else if (txtContact.Text == "")
             {
                 txtId.Text = "";
             }
@@ -178,7 +163,7 @@ namespace ManageIT.LMS.Forms
 
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
-            if(InputCheck())
+            if (InputCheck())
             {
                 MessageBox.Show("Successfully Registered", "Success");
                 ClearFields();
@@ -187,22 +172,22 @@ namespace ManageIT.LMS.Forms
 
         private void TxtId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            FocusOn(e, txtPassword);
+            FormsUtility.FocusOn(e, txtPassword);
         }
 
         private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            FocusOn(e, txtName);
+            FormsUtility.FocusOn(e, txtName);
         }
 
         private void TxtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            FocusOn(e, txtContact);
+            FormsUtility.FocusOn(e, txtContact);
         }
 
         private void TxtContact_KeyPress(object sender, KeyPressEventArgs e)
         {
-            FocusOn(e, txtNid);
+            FormsUtility.FocusOn(e, txtNid);
         }
     }
 }
