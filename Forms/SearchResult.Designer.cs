@@ -38,7 +38,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpSearch = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tblSortElement = new System.Windows.Forms.TableLayoutPanel();
             this.cbSearchBy = new System.Windows.Forms.ComboBox();
@@ -53,7 +53,7 @@
             this.tblSortReleasDate = new System.Windows.Forms.TableLayoutPanel();
             this.lblReleasDate = new System.Windows.Forms.Label();
             this.dtpSort = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckbFixed = new System.Windows.Forms.CheckBox();
             this.tblSortGener = new System.Windows.Forms.TableLayoutPanel();
             this.lblGener = new System.Windows.Forms.Label();
             this.cbSortGener = new System.Windows.Forms.ComboBox();
@@ -62,6 +62,8 @@
             this.btnSort = new System.Windows.Forms.Button();
             this.cbSortAuthor = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -75,6 +77,7 @@
             this.tblSortReleasDate.SuspendLayout();
             this.tblSortGener.SuspendLayout();
             this.tblSortAuthor.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -100,7 +103,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 383F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dgvSearch, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel9, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -199,17 +202,17 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(383, 106);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtpSearch
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Purple;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(148, 10);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 33);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtpSearch.CalendarForeColor = System.Drawing.Color.Purple;
+            this.dtpSearch.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dtpSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.dtpSearch.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpSearch.Location = new System.Drawing.Point(148, 10);
+            this.dtpSearch.Name = "dtpSearch";
+            this.dtpSearch.Size = new System.Drawing.Size(139, 33);
+            this.dtpSearch.TabIndex = 6;
             // 
             // tableLayoutPanel5
             // 
@@ -288,7 +291,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tableLayoutPanel8.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.dateTimePicker1, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.dtpSearch, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.ckPdate, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
@@ -321,6 +324,7 @@
             this.lblError.Size = new System.Drawing.Size(115, 20);
             this.lblError.TabIndex = 0;
             this.lblError.Text = "No Item Found";
+            this.lblError.Visible = false;
             // 
             // label1
             // 
@@ -362,7 +366,6 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSearch.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -375,14 +378,15 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSearch.DoubleBuffered = true;
             this.dgvSearch.EnableHeadersVisualStyles = false;
             this.dgvSearch.HeaderBgColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvSearch.HeaderForeColor = System.Drawing.Color.Coral;
-            this.dgvSearch.Location = new System.Drawing.Point(623, 255);
+            this.dgvSearch.Location = new System.Drawing.Point(3, 63);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvSearch.Size = new System.Drawing.Size(321, 250);
+            this.dgvSearch.Size = new System.Drawing.Size(789, 669);
             this.dgvSearch.TabIndex = 3;
             // 
             // tblSortReleasDate
@@ -393,7 +397,7 @@
             this.tblSortReleasDate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tblSortReleasDate.Controls.Add(this.lblReleasDate, 0, 0);
             this.tblSortReleasDate.Controls.Add(this.dtpSort, 1, 0);
-            this.tblSortReleasDate.Controls.Add(this.checkBox1, 2, 0);
+            this.tblSortReleasDate.Controls.Add(this.ckbFixed, 2, 0);
             this.tblSortReleasDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblSortReleasDate.Location = new System.Drawing.Point(0, 0);
             this.tblSortReleasDate.Margin = new System.Windows.Forms.Padding(0);
@@ -428,16 +432,16 @@
             this.dtpSort.Size = new System.Drawing.Size(134, 33);
             this.dtpSort.TabIndex = 6;
             // 
-            // checkBox1
+            // ckbFixed
             // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(311, 22);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Fixed";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckbFixed.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ckbFixed.AutoSize = true;
+            this.ckbFixed.Location = new System.Drawing.Point(311, 22);
+            this.ckbFixed.Name = "ckbFixed";
+            this.ckbFixed.Size = new System.Drawing.Size(51, 17);
+            this.ckbFixed.TabIndex = 7;
+            this.ckbFixed.Text = "Fixed";
+            this.ckbFixed.UseVisualStyleBackColor = true;
             // 
             // tblSortGener
             // 
@@ -555,6 +559,34 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Sort Your Result";
             // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.dgvSearch, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(386, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 3;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(795, 755);
+            this.tableLayoutPanel9.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label5.Location = new System.Drawing.Point(314, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(167, 32);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Search Result";
+            // 
             // SearchResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,6 +617,8 @@
             this.tblSortGener.PerformLayout();
             this.tblSortAuthor.ResumeLayout(false);
             this.tblSortAuthor.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -598,7 +632,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tblSortElement;
         private System.Windows.Forms.ComboBox cbSearchBy;
@@ -614,7 +648,7 @@
         private System.Windows.Forms.TableLayoutPanel tblSortReleasDate;
         private System.Windows.Forms.Label lblReleasDate;
         private System.Windows.Forms.DateTimePicker dtpSort;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ckbFixed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblError;
@@ -622,5 +656,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox ckPdate;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Label label5;
     }
 }
