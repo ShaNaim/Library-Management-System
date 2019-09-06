@@ -19,33 +19,89 @@ namespace ManageIT.LMS.Forms
         }
 
         /////////////////////////// Custom Methods ///////////////////////////
-        private void SearchnSort(bool dateSearch = false)
+        private void SearchnSort(int slectedIndex, bool dateSearch = false)
         {
             tblSortElement.Visible = true;
             if(dateSearch)
             {
-                tblSortReleasDate.Visible = false;
                 tblSortAuthor.Visible = true;
                 tblSortGener.Visible = true;
-                
+                tblSortReleasDate.Visible = false;
+
             }
             else
             {
-                if (cbSearchBy.SelectedIndex == 1)
+                if (txtSearch.Text != "")
                 {
-                    // Search By Author
-                    
-                    tblSortAuthor.Visible = false;
-                    tblSortGener.Visible = true;
-                    tblSortReleasDate.Visible = true;
-                }
-                else if (cbSearchBy.SelectedIndex == 2)
-                {
-                    // Search By Gener
+                    if (slectedIndex == 1)
+                    {
+                        // Search By Author
 
-                    tblSortGener.Visible = false;
-                    tblSortAuthor.Visible = true;
-                    tblSortReleasDate.Visible = true;
+                        tblSortAuthor.Visible = false;
+                        tblSortGener.Visible = true;
+                        tblSortReleasDate.Visible = true;
+                    }
+                    else if (slectedIndex == 2)
+                    {
+                        // Search By Gener
+
+                        tblSortAuthor.Visible = true;
+                        tblSortGener.Visible = false;
+                        tblSortReleasDate.Visible = true;
+                    }
+                    else if (slectedIndex == 0)
+                    {
+                        // Search By Title
+
+                        tblSortAuthor.Visible = true;
+                        tblSortGener.Visible = true;
+                        tblSortReleasDate.Visible = false;
+                    }
+                    else if (slectedIndex == 3)
+                    {
+                        // Search By ISBN
+
+                        tblSortAuthor.Visible = false;
+                        tblSortGener.Visible = false;
+                        tblSortReleasDate.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Search , Must Provide Some Information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Search , Must Provide Some Information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void SearchByDate()
+        {
+            DateTime userDob = dtpSearch.Value;
+            DateTime dt = DateTime.Now;
+            int compairDate = DateTime.Compare(userDob.Date, dt.Date);
+
+            if (compairDate >= 0)
+            {
+                if (compairDate > 0)
+                {
+                    MessageBox.Show("Incorrect Search Date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                tblSortElement.Visible = false;
+            }
+            else
+            {
+                if (ckbFixed.Checked)
+                {
+                    //Search By Date Selected
+                    SearchnSort(0,true);
+                }
+                else
+                {
+                    //Search by Date Bettwen
+                    SearchnSort(0,true);
                 }
             }
         }
@@ -56,49 +112,24 @@ namespace ManageIT.LMS.Forms
         {
             if (cbSearchBy.Text == "")
             {
-                DateTime userDob = dtpSearch.Value;
-                DateTime dt = DateTime.Now;
-                int compairDate = DateTime.Compare(userDob.Date, dt.Date);
-
-                if (compairDate >= 0)
+                if (txtSearch.Text != "")
                 {
-                    //Search By Title
-
-                    if(compairDate > 0)
-                    {
-                        lblError.Text = "Incorrect Date";
-                        lblError.Visible = true;
-                    }
-                    tblSortElement.Visible = false;
+                    SearchnSort(0);
                 }
                 else
                 {
-                    if(ckbFixed.Checked)
-                    {
-                        //Search By Date Selected
-                        SearchnSort(true);
-                    }
-                    else
-                    {
-                        //Search by Date Bettwen
-                        SearchnSort(true);
-                    }
-                } 
+                    SearchByDate();
+                }
             }
-            else if(cbSearchBy.SelectedIndex == 0)
+            else if (cbSearchBy.SelectedIndex == 4)
             {
-                // Search By Title
-            }
-            else if(cbSearchBy.SelectedIndex == 3)
-            {
-                // Search by ISBN
+                SearchByDate();
             }
             else
             {
-                SearchnSort();
+                SearchnSort(cbSearchBy.SelectedIndex);
             }
         }
-
         private void BtnSearch_MouseEnter(object sender, EventArgs e)
         {
             FormsUtility.HoverEffect(btnSearch,FormsUtility.btnHovColor);

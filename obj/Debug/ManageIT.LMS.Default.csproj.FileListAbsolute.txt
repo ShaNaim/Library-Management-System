@@ -33,3 +33,4 @@ D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\Bunifu.UI.W
 D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\obj\Debug\ManageIT.LMS.Default.csprojAssemblyReference.cache
 D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
 D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+D:\ManageIT\Library_Management_System\ManageIT.LMS.Default\obj\Debug\ManageIT.LMS.Default.Forms.AdminMain.resources
