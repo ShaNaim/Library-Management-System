@@ -50,14 +50,14 @@ namespace ManageIT.LMS.Forms
             HoverEffect(this.btnClose);
         }
 
-        private void BunifuFlatButton1_Click(object sender, EventArgs e)
+        private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login LoginPage = new Login();
             LoginPage.Show();
             this.Hide();
         }
 
-        private void BtnRegister_Click(object sender, EventArgs e)
+        private void RegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Register register = new Register();
             register.Show();

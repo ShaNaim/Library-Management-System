@@ -1,4 +1,4 @@
-﻿using ManageIT.LMS.Default.Forms;
+﻿using ManageIT.LMS.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +13,25 @@ namespace ManageIT.LMS.Forms
 {
     public partial class Login : Form
     {
+        int testPass = 12345;
         public Login()
         {
             InitializeComponent();
         }
 
         /////////////////////// Custome Methoods ////////////////////////////
-
+        private void LoginTo()
+        {
+            if (txtUserName.Text == "Admin")
+            {
+                if (Int32.Parse(txtPassword.Text) == testPass)
+                {
+                    var adminLogin = new AdminMain();
+                    adminLogin.Show();
+                    this.Hide();
+                }
+            }
+        }
         /////////////////////// Custome Methoods Ends ////////////////////////////
 
         /////////////////////// Action Events ////////////////////////////
@@ -48,6 +60,24 @@ namespace ManageIT.LMS.Forms
             Register registerPage = new Register();
             registerPage.Show();
             this.Hide();
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            LoginTo();
+        }
+
+        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FormsUtility.FocusOn(e, txtPassword);
+        }
+
+        private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar.Equals((char)Keys.Enter))
+            {
+                LoginTo();
+            }
         }
     }
 }

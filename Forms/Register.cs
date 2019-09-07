@@ -1,4 +1,4 @@
-﻿using ManageIT.LMS.Default.Forms;
+﻿using ManageIT.LMS.Forms;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -13,10 +13,6 @@ namespace ManageIT.LMS.Forms
         }
 
         /////////////////////// Custom Methods ///////////////////////
-        
-
-        
-
         private void ClearFields()
         {
             txtId.Text = "";

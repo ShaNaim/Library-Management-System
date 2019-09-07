@@ -170,6 +170,7 @@
             this.txtPassword.Size = new System.Drawing.Size(398, 33);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // label1
             // 
@@ -206,6 +207,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(398, 33);
             this.txtUserName.TabIndex = 2;
+            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUserName_KeyPress);
             // 
             // tableLayoutPanel4
             // 
@@ -239,6 +241,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "     Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             this.btnLogin.MouseEnter += new System.EventHandler(this.BtnLogin_MouseHover);
             this.btnLogin.MouseLeave += new System.EventHandler(this.BtnLogin_MouseLeave);
             this.btnLogin.MouseHover += new System.EventHandler(this.BtnLogin_MouseHover);
@@ -256,7 +259,6 @@
             this.btnResister.TabIndex = 5;
             this.btnResister.TabStop = true;
             this.btnResister.Text = "Don\'t Have an Account ? Resister Here";
-            //this.btnResister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BtnResister_LinkClicked);
             this.btnResister.Click += new System.EventHandler(this.BtnResister_Click);
             // 
             // label3

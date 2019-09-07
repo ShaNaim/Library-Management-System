@@ -17,7 +17,7 @@ namespace ManageIT.LMS.Default
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SearchResult());
+            Application.Run(new Home());
         }
     }
 }
